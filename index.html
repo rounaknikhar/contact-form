@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Form</title>
+    <script defer src="js/script.js"></script>    
+</head>
+<body>
+    <div class="container">
+        <form action="controller/form-control.php" method="post" id="form" enctype="multipart/form-data">
+        <div id="error"></div>
+        <div class="first-part">
+        <table>
+            <caption>Contact Form</caption>
+            <!--------------------Row 1------------------------->
+
+            <thead>
+              <tr>
+                <th scope="col"><label id="firstName-error-label" for="firstName">First Name <span class="required">*</span></label></th>
+                <th scope="col"> <label id="lastName-error-label" for="lastName">Last Name <span class="required">*</span></label></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="First Name*"><input type="text" name="firstName" id="firstName" required></td>
+                <td data-label="Last Name*"><input type="text" name="lastName" id="lastName" required></td>
+              </tr>
+            </tbody>
+            <!--------------------Row 2------------------------->
+ 
+            <thead>
+                <tr>
+                  <th scope="col"><label id="email-error-label" for="email">Email Address <span class="required">*</span></label></th>
+                  <th scope="col"> <label id="contact-number-error-label" for="contactNumber">Contact Number <span class="required">*</span></label></th>
+                </tr>
+            </thead> 
+            <tbody>
+                <tr>
+                  <td data-label="Email Address*"><input type="email" name="email" id="email" required></td>
+                  <td data-label="Contact Number*"><input type="text" name="contactNumber" id="contactNumber" required></td>
+                </tr>
+            </tbody>
+            <!--------------------Row 3------------------------->
+
+            <thead>
+                <tr>
+                  <th scope="col"><label id="addressInput1-error-label" for="addressInput1">Address Line 1 <span class="required">*</span></label></th>
+                  <th scope="col"> <label for="addressInput2">Address  Line 2 <span class="optional-label">(optional)</span></label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td data-label="Address 1*"><input type="text" name="addressInput1" id="addressInput1" required></td>
+                  <td data-label="Address 2 (optional)"><input type="text" name="addressInput2" id="addressInput2"></td>
+                </tr>
+            </tbody>            
+            <!--------------------Row 4------------------------->
+
+            <thead>
+                <tr>
+                  <th scope="col"><label id="town-error-label" for="town">Town <span class="required">*</span></label></th>
+                  <th scope="col"> <label for="county">County <span class="optional-label">(optional)</span></label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td data-label="Town*"><input type="text" name="town" id="town" required></td>
+                  <td data-label="County (optional)"><input type="text" name="county" id="county"></td>
+                </tr>
+            </tbody>
+            <!--------------------Row 5------------------------->
+
+            <thead>
+                <tr>
+                  <th scope="col"><label id="postcode-error-label" for="postcode">Postcode <span class="required">*</span></label></th>
+                  <th scope="col"> <label id="country-error-label" for="country">Country <span class="required">*</span></label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td data-label="Postcode*"><input type="text" name="postcode" id="postcode" required></td>
+                  <td data-label="Country*"> 
+                    <input type="text" list="country" id="countryInput" name="countryInput" placeholder="Search" required>
+                      <datalist id="country"></datalist>
+                    </td>
+                </tr>
+            </tbody>    
+            
+        </table>
+        </div>
+            <!--------------------Row 6------------------------->
+        <div class="second-part">
+        <table>
+             <thead>
+                <tr>
+                  <th scope="col"><label id="description-error-label" for="description">Description <span class="required">*</span></label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td data-label="Description*">
+                    <textarea name="description" id="description" cols="30" rows="20" maxlength="1000" required></textarea>
+                    <p id="description-word-count" class="description-word-count" for="description">You have written 0 words and 0 characters out of 1000.</p>      
+                  </td>
+                
+                </tr>
+            </tbody>  
+            <!--------------------Row 7------------------------->
+            <thead>
+                <tr>
+                  <th scope="col"><label for="fileSelect" id="fileSelect-error-label">Your CV <span class="optional-label">(optional)</span></label></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>                
+                    <td data-label="CV (optional)">
+                        <input type="file" name="fileSelect" id="fileSelect" webkitdirectory directory multiple accept=".pdf, .doc, .docx">    
+                        <div class="end-buttons">              
+                          <input type="submit" value="Submit">
+                          <input type="reset" value="Clear" onclick="clearAll()">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+             
+        </table>
+        </div>
+        </form>
+    </div>
+</body>
+</html>

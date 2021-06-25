@@ -1,0 +1,240 @@
+body {
+  box-sizing: border-box;
+  background: rgb(251, 181, 64);
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background-color: rgb(255, 221, 162);
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding:100px;
+}
+
+.php-displayMsg{
+  text-align: center;
+}
+
+.first-part { 
+  background-color: rgb(255, 221, 162);
+}
+.end-buttons{
+  float: right; 
+  margin-right: 15px;
+}
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 3em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+  font-weight: 700;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+input[type=text], input[type=email] {
+  width: 85%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+  border: none;
+  font-size: 1em;
+  border: 2px solid #ffffff;
+  outline: none;
+  transition: 0.1s ease-in;
+  
+}
+
+
+
+input[type=submit], input[type=reset], input[type=button], button{
+    padding: 1em;
+    margin-top: 5em;
+    width: 10em;
+    text-transform: uppercase;
+    border: 2px solid rgb(251, 181, 64);
+    background: rgb(251, 181, 64);
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+li {
+  list-style : none;
+}
+input[type=file]::-webkit-file-upload-button {
+  padding: 1em;
+  width: 10em;
+  text-transform: uppercase;
+  border: 2px solid rgb(251, 181, 64);
+  background: rgb(251, 181, 64);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: 0.1s ease-in;
+}
+textarea{
+  width: 93%;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  border: none;
+  font-size: 1.3em;
+  border: 2px solid #ffffff;
+  outline: none;
+  resize: vertical;
+  transition: 0.1s ease-in;
+}
+.required-label, .required{
+  color:rgb(219, 44, 44);
+}
+
+.description-word-count {
+  text-align: center;
+}
+.optional-label{
+  color:rgba(0, 0, 0, 0.705);
+  font-size: 0.8em;
+}
+
+
+input[type=text]:focus,  
+input[type=submit]:focus, 
+textarea:focus, 
+select:focus,
+input[type=button]:focus {
+  box-shadow: 0 0 5px rgb(251, 181, 64);
+  border: 2px solid rgb(251, 181, 64);
+}
+
+input[type=text]:hover,  
+input[type=submit]:hover, 
+textarea:hover, 
+select:hover,
+input[type=button]:hover {
+  border: 2px solid rgb(251, 181, 64);
+}
+
+input[type=submit]:active, 
+input[type=reset]:active{
+  background: transparent;
+  box-shadow: 0 0 5px rgb(251, 181, 64);
+  border: 2px solid rgb(251, 181, 64);
+}
+
+button:hover, 
+button:focus, 
+button:hover, 
+input[type=submit]:hover, 
+input[type=submit]:focus, 
+input[type=reset]:hover, 
+input[type=reset]:focus, 
+input[type=file]::-webkit-file-upload-button:hover, 
+input[type=file]::-webkit-file-upload-button:focus {
+  background: transparent;
+  box-shadow: 0 0 5px rgb(251, 181, 64);
+  border: 2px solid rgb(251, 181, 64);
+}
+
+.content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+      margin: 0;  
+      padding:0;
+  }
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 2.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    display: block;
+  }
+  
+  table td {
+    margin: 5px;
+    display: block;
+    font-size: .8em;
+    text-align: center;
+    
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    float: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+    background: rgb(251, 181, 64);
+    padding:10px;
+  }
+  
+  input[type="text"], input[type="email"], textarea{
+    border: 8px solid rgb(251, 181, 64);
+  }
+
+  input[type="text"]:focus, 
+  input[type="text"]:hover, 
+  input[type="text"]:active,
+  input[type="email"]:focus, 
+  input[type="email"]:hover, 
+  input[type="email"]:active,
+  textarea:hover,
+  textarea:active,
+  textarea:focus{
+    border: 8px solid rgb(251, 181, 64);
+  }
+  textarea {
+    width: 85%;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  .end-buttons{
+    float: center;
+    margin: 25px;
+  }
+}
+
